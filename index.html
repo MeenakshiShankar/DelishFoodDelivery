@@ -6,6 +6,8 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
             <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+            <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+            <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
             
           <style>
 
@@ -199,47 +201,14 @@
   font-size: 10px;
 }
 
-@media only screen and (max-width: 768px) {
-  /* For mobile phones: */
-  [class*="col-"] {
-    width: 100%;
+@media screen and (max-width: 600px) {
+  .flip-card {
+    float: none;
+    width: 50%;
   }
-
-  @media only screen and (max-width: 600px) {
-  .example {background: red;}
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .example {background: green;}
-}
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .example {background: blue;}
-} 
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .example {background: orange;}
-} 
-
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-  .example {background: pink;}
-}
-}
-
-.row::after {
-  content: "";
-  clear: both;
-  display: block;
-}
-
-[class*="col-"] {
-  float: left;
-  padding: 15px;
-}
           </style>
     </head>
   
