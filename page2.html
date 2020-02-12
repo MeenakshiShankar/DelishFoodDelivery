@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <style>
+                * {
+                  box-sizing: border-box;
+                }
+                
+                body {
+                  margin: 0;
+                  font-family: Arial, Helvetica, sans-serif;
+                }
+                
+                /* The grid: Three equal columns that floats next to each other */
+                .column {
+                  float: left;
+                  width: 33.33%;
+                  padding: 50px;
+                  text-align: center;
+                  font-size: 25px;
+                  cursor: pointer;
+                  color: white;
+                }
+                
+                .containerTab {
+                  padding: 20px;
+                  color: white;
+                }
+                
+                /* Clear floats after the columns */
+                .row:after {
+                  content: "";
+                  display: table;
+                  clear: both;
+                }
+                
+                /* Closable button inside the container tab */
+                .closebtn {
+                  float: right;
+                  color: white;
+                  font-size: 35px;
+                  cursor: pointer;
+                }
+                </style>
+    </head>
+    <body>
+        <div style="text-align:center">
+            <h2 style="font-family:sans-serif;font-style: italic;">Delishian Exclusives</h2>
+            <p>Seal the Deal and Hop on for a Fun filled Delishian Journey</p>
+              <p>  {Click on the Boxes to Explore}
+            </p>
+          </div>
+          
+          <!-- Three columns -->
+          <div class="row">
+            <div class="column" onclick="openTab('b1');" style="background:rgb(0, 128, 85);font-family: 'Lucida Sans';height: 300px;font-size: 20px;">
+              <h3>New Here? </h3>
+              <p>Give your tastebuds the 
+                  Extravaganza treatment with your Welcome Offer
+                of 50% off on first 2 orders </p>
+            </div>
+            <div class="column" onclick="openTab('b2');" style="background:rgb(255, 0, 170);height: 300px;font-size: 20px;">
+                <h3>Beat The Heat</h3>   
+                <p>Quench Your Endless Summer Thirst 
+                    with these frost biting offers</p>
+            </div>
+            <div class="column" onclick="openTab('b3');" style="background:rgb(255, 136, 0);height: 300px;font-size: 20px;">
+                <h3>Desiring Some Hot Spicy Food</h3>   
+                <p>It's The Delishian Fiery Fest and choose from
+                     wide range of spicy cuisines on offer</p>
+            </div>
+          </div>
+          
+          <!-- Full-width columns: (hidden by default) -->
+          <div id="b1" class="containerTab" style="display:none;background:green">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <h2>Box 1</h2>
+            <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+          </div>
+          
+          <div id="b2" class="containerTab" style="display:none;background:blue">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <h2>Box 2</h2>
+            <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+          </div>
+          
+          <div id="b3" class="containerTab" style="display:none;background:red">
+            <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+            <h2>Box 3</h2>
+            <p>Lorem ipsum dolor sit amet, te quo doctus abhorreant, et pri deleniti intellegat, te sanctus inermis ullamcorper nam. Ius error diceret deseruisse ad</p>
+          </div>
+          
+          <script>
+          function openTab(tabName) {
+            var i, x;
+            x = document.getElementsByClassName("containerTab");
+            for (i = 0; i < x.length; i++) {
+              x[i].style.display = "none";
+            }
+            document.getElementById(tabName).style.display = "block";
+          }
+          </script>
+          
+    </body>
+    </html>
