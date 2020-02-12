@@ -7,6 +7,8 @@
             <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
             <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
             <link rel="stylesheet" media="mediatype and|not|only (expressions)" href="screen.css">
+            <link rel="stylesheet" media="screen and (min-width: 900px)" href="widescreen.css">
+            <link rel="stylesheet" media="screen and (max-width: 600px)" href="smallscreen.css">
         <style>
             .parallax {
   /* The image used */
@@ -61,6 +63,15 @@
   background-color: #2980b9;
   color: white;
   transform: rotateY(180deg);
+}
+
+
+@media screen and (max-width: 700px) {
+
+.flip-card{
+  width: 50px;
+  height: 50px;
+
 }
         </style>
     </head>
